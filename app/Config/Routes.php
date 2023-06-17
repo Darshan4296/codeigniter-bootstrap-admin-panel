@@ -81,5 +81,8 @@ $routes->get('employee/edit/(:num)', 'EmpshowController::edit/$1');
 $routes->post('employee/update/(:num)', 'EmpshowController::update/$1');
 $routes->get('employee/delete/(:num)','EmpshowController::delete/$1');
 
+$routes->get('employee/(:num)/salary','SalaryController::index/$1');
+
+
 
 
