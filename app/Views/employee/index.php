@@ -26,17 +26,24 @@
                         <th>Age</th>
                         <th>Start date</th>
                         <th>Salary</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                    </tr>
+                <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?= $user['name'] ?></td>
+                    <td><?= $user['position'] ?></td>
+                    <td><?= $user['office'] ?></td>
+                    <td><?= $user['age'] ?></td>
+                    <td><?= $user['date'] ?></td>
+                    <td><?= $user['salary'] ?></td>
+                    <td>
+                        <a href="<?php echo base_url('/employee/edit/'.$user['id']); ?>">Edit</a>
+                        <a href="<?php echo base_url('/employee/delete/').$user['id'] ?>">Delete</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

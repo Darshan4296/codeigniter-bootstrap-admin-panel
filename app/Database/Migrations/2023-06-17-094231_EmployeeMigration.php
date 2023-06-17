@@ -32,7 +32,7 @@ class EmployeeMigration extends Migration
                 'constraint'=>10,
             ],
             'date'=>[
-                'type'=>'Date',
+                'type'=>'DATE',
             ],
             'salary'=>[
                 'type'=>'INT',

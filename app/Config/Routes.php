@@ -74,6 +74,12 @@ $routes->post('/page/update/(:num)', 'UserController::update/$1');
 $routes->get('/page/delete/(:num)','UserController::delete/$1');
 
 $routes->get('/employee/add', 'EmployeeController::add');
-$routes->get('/employee/store', 'EmployeeController::store');
+$routes->post('/employee/store', 'EmployeeController::store');
+
+$routes->get('employee/index', 'EmpshowController::index');
+$routes->get('employee/edit/(:num)', 'EmpshowController::edit/$1');
+$routes->post('employee/update/(:num)', 'EmpshowController::update/$1');
+$routes->get('employee/delete/(:num)','EmpshowController::delete/$1');
+
 
 

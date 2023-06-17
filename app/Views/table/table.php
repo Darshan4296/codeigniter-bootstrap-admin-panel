@@ -28,6 +28,7 @@
                         <th>Age</th>
                         <th>Start date</th>
                         <th>Salary</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tfoot>
