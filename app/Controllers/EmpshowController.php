@@ -11,7 +11,7 @@ class EmpshowController extends BaseController
     public function index()
     {
         $employeeModel = new EmployeeModel();
-        $data['users'] =$employeeModel->findAll();
+        $data['employees'] =$employeeModel->findAll();
         return view('employee/index',$data);
     }
 
@@ -25,7 +25,7 @@ class EmpshowController extends BaseController
 
         $employee = $employeeModel->find($id);
 
-        if (empty($user)) {
+        if (empty($employee)) {
             return redirect()->back()->with('fail','Invalid request');
         }
 
@@ -52,18 +52,20 @@ class EmpshowController extends BaseController
 
     public function edit($id)
     {
+        
         if(empty($id))
         {
             return redirect()->to('/employee')->with('fail','Invalid Request');
         }
         $employeeModel = new EmployeeModel();
         $employee = $employeeModel->find($id);
-        
-        if(empty($user))
+       
+        if(empty($employee))
         {
             return redirect()->to('/employee')->with('fail','Invalid Request');
         }
-        return view('/edit',['user'=>$user]);
+
+        return view('employee/edit',['employee'=>$employee]);
         
     }
     public function delete($id)
@@ -75,7 +77,7 @@ class EmpshowController extends BaseController
         $employeeModel = new EmployeeModel();
         $employee = $employeeModel->find($id);
 
-        if(empty($user))
+        if(empty($employee))
         {
             return redirect()->to('/employee')->with('fail','Invalid Request');
         }

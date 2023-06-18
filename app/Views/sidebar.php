@@ -99,9 +99,9 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-    <a class="nav-link" href="<?php echo site_url("table");  ?>">
+    <a class="nav-link" href="<?php echo site_url("employee");  ?>">
         <i class="fas fa-fw fa-table"></i>
-        <span>Tables</span></a>
+        <span>Employee</span></a>
 </li>
 
 <!-- Nav Item - Tables -->

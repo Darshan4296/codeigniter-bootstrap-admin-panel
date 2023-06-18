@@ -66,8 +66,6 @@ $routes->get('/logout', 'pageController::logout');
 
 $routes->get('/chart', 'ChartController::index');
 
-$routes->get('/table', 'TableController::index');
-
 $routes->get('/page', 'UserController::index');
 $routes->get('/page/edit/(:num)', 'UserController::edit/$1');
 $routes->post('/page/update/(:num)', 'UserController::update/$1');
@@ -76,12 +74,10 @@ $routes->get('/page/delete/(:num)','UserController::delete/$1');
 $routes->get('/employee/add', 'EmployeeController::add');
 $routes->post('/employee/store', 'EmployeeController::store');
 
-$routes->get('employee/index', 'EmpshowController::index');
-$routes->get('employee/edit/(:num)', 'EmpshowController::edit/$1');
-$routes->post('employee/update/(:num)', 'EmpshowController::update/$1');
-$routes->get('employee/delete/(:num)','EmpshowController::delete/$1');
-
-$routes->get('employee/(:num)/salary','SalaryController::index/$1');
+$routes->get('/employee', 'EmpshowController::index');
+$routes->get('/employee/edit/(:num)', 'EmpshowController::edit/$1');
+$routes->post('/employee/update/(:num)', 'EmpshowController::update/$1');
+$routes->get('/employee/delete/(:num)','EmpshowController::delete/$1');
 
 
 

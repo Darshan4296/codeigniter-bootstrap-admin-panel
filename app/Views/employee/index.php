@@ -30,17 +30,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($users as $user) : ?>
+                    
+                <?php foreach ($employees as $employee) : ?>
                 <tr>
-                    <td><?= $user['name'] ?></td>
-                    <td><?= $user['position'] ?></td>
-                    <td><?= $user['office'] ?></td>
-                    <td><?= $user['age'] ?></td>
-                    <td><?= $user['date'] ?></td>
-                    <td><?= $user['salary'] ?></td>
+                    <td><?= $employee['name'] ?></td>
+                    <td><?= $employee['position'] ?></td>
+                    <td><?= $employee['office'] ?></td>
+                    <td><?= $employee['age'] ?></td>
+                    <td><?= $employee['date'] ?></td>
+                    <td><?= $employee['salary'] ?></td>
                     <td>
-                        <a href="<?php echo base_url('/employee/edit/'.$user['id']); ?>">Edit</a>
-                        <a href="<?php echo base_url('/employee/delete/').$user['id'] ?>">Delete</a>
+                        <a href="<?php echo base_url('/employee/edit/'.$employee['id']); ?>">Edit</a>
+                        <a href="<?php echo base_url('/employee/delete/').$employee['id'] ?>">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
